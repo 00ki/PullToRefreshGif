@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.chanven.commonpulltorefresh.PtrClassicFrameLayout
+        android:id="@+id/test_grid_view_frame"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f0f0f0"
+        ptr:ptr_duration_to_close="200"
+        ptr:ptr_duration_to_close_header="700"
+        ptr:ptr_keep_header_when_refresh="true"
+        ptr:ptr_pull_to_fresh="false"
+        ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        ptr:ptr_resistance="1.8">
+
+        <com.chanven.commonpulltorefresh.loadmore.LoadMoreGridView
+            android:id="@+id/test_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:choiceMode="singleChoice"
+            android:divider="#b0b0b0"
+            android:dividerHeight="0.1dp"
+            android:fadingEdge="none"
+            android:numColumns="4"
+            android:scrollbarStyle="outsideOverlay"/>
+    </com.chanven.commonpulltorefresh.PtrClassicFrameLayout>
+
+</LinearLayout>

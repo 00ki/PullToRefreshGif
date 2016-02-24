@@ -1,0 +1,26 @@
+/local.properties
+# built application files
+*.apk
+*.ap_
+# files for the dex VM
+*.dex
+# Java class files
+*.class
+# generated files
+build/
+bin/
+gen/
+out/
+annotation/
+#Gradle Files
+gradle/
+gradlew
+gradlew.bat
+.gradle
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+newsand_release_key.key
+/DBao/*.bat
