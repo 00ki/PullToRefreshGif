@@ -33,6 +33,7 @@ public class ListViewActivity extends Activity {
 
     @AfterViews
     void afterViews() {
+
         mAdapter = new ListViewAdapter(this, mData);
         lvListView.setAdapter(mAdapter);
         setRefreshListener();
