@@ -17,8 +17,27 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     >
-    ListView、GridView、ScrollView、WebView、LoadMoreListView、LoadMoreGridView、等
+    <!--ListView、GridView、ScrollView、WebView、LoadMoreListView、LoadMoreGridView、等-->
     </com.pulltorefresh.PtrGifFrameLayout>
+```
+实例化、刷新事件监听
+```java
+
+//获取布局view
+@ViewById
+PtrGifFrameLayout ptrGifFrameLayout;
+
+// 监听下接刷新事件
+ptrGifFrameLayout.setPtrHandler(new PtrDefaultHandler() {
+            @Override
+            public void onRefreshBegin(PtrFrameLayout frame) {
+                //loadData()
+            }
+        });
+
+// 刷新完成
+ ptrGifFrameLayout.refreshComplete();
+
 ```
 # 用到哪些APP？
 一元进宝 http://www.yyjinbao.com/
