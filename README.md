@@ -39,5 +39,5 @@ ptrGifFrameLayout.setPtrHandler(new PtrDefaultHandler() {
  ptrGifFrameLayout.refreshComplete();
 
 ```
-# 用到哪些APP？
+# 哪些APP使用
 一元进宝 http://www.yyjinbao.com/
