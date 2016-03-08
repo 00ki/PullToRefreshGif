@@ -19,7 +19,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    public void goListView(View view) {
+    public void goListViewGif(View view) {
+        ListViewGifActivity_.intent(this).start();
+    }
+
+    public void goListViewNormal(View view) {
         ListViewActivity_.intent(this).start();
     }
 }

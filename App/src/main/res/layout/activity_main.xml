@@ -13,8 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:onClick="goListView"
-        android:text="ListView"
+        android:onClick="goListViewGif"
+        android:text="ListView(gif动画下拉刷新及加载更多)"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="goListViewNormal"
+        android:text="ListView(普通下拉刷新及加载更多)"
+        android:textAllCaps="false"/>
 </LinearLayout>

@@ -9,9 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.pulltorefresh.PtrClassicFrameLayout;
 import com.pulltorefresh.PtrDefaultHandler;
 import com.pulltorefresh.PtrFrameLayout;
+import com.pulltorefresh.PtrGifFrameLayout;
 import com.pulltorefresh.loadmore.LoadMoreListView;
 
 import org.androidannotations.annotations.AfterViews;
@@ -26,8 +26,8 @@ import java.util.List;
 /**
  * Created by xjz on 2016/2/24
  */
-@EActivity(R.layout.listview_activity)
-public class ListViewActivity extends Activity {
+@EActivity(R.layout.listview_gif_activity)
+public class ListViewGifActivity extends Activity {
 
     private ListViewAdapter mAdapter;
     private List<String> mData = new ArrayList<>();
@@ -42,12 +42,12 @@ public class ListViewActivity extends Activity {
     }
 
     @ViewById
-    PtrClassicFrameLayout ptrFrameLayout;
+    PtrGifFrameLayout ptrGifFrameLayout;
     @ViewById
     LoadMoreListView lvListView;
 
     void setRefreshListener() {
-        ptrFrameLayout.setPtrHandler(new PtrDefaultHandler() {
+        ptrGifFrameLayout.setPtrHandler(new PtrDefaultHandler() {
             @Override
             public void onRefreshBegin(PtrFrameLayout frame) {
                 loadDataDelay();
@@ -73,6 +73,7 @@ public class ListViewActivity extends Activity {
         }
     }
 
+
     @Background
     void loadData() {
         mData.clear();
@@ -93,7 +94,7 @@ public class ListViewActivity extends Activity {
 
     @UiThread
     void loadFinish() {
-        ptrFrameLayout.refreshComplete();
+        ptrGifFrameLayout.refreshComplete();
         mAdapter.notifyDataSetChanged();
     }
 

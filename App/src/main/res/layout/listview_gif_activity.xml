@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.pulltorefresh.PtrClassicFrameLayout
-    android:id="@+id/ptrFrameLayout"
+<com.pulltorefresh.PtrGifFrameLayout
+    android:id="@+id/ptrGifFrameLayout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,4 +16,4 @@
         android:divider="#e4e4e4"
         android:scrollbars="none"
         />
-</com.pulltorefresh.PtrClassicFrameLayout>
+</com.pulltorefresh.PtrGifFrameLayout>
