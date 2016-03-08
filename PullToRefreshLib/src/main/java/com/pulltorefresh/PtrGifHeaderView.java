@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.pulltorefresh.indicator.PtrIndicator;
-import com.chanven.commonpulltorefreshview.R;
 
 import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
@@ -71,13 +70,19 @@ public class PtrGifHeaderView extends FrameLayout implements PtrUIHandler {
         if (mIdelDrawble != null && mIdelDrawble.isPlaying()) {
             mIdelDrawble.pause();
         }
-        mHeaderImage.setImageDrawable(mIdelDrawble);
+        if (mHeaderImage != null) {
+            mHeaderImage.setImageDrawable(mIdelDrawble);
+        }
+
     }
 
     @Override
     public void onUIRefreshPrepare(PtrFrameLayout frame) {
         Log.d("DdHeaderView", "onUIRefreshPrepare");
-        mHeaderImage.setImageDrawable(mIdelDrawble);
+        if (mHeaderImage != null) {
+            mHeaderImage.setImageDrawable(mIdelDrawble);
+        }
+
         if (!mIdelDrawble.isPlaying()) {
             mIdelDrawble.start();
         }
@@ -86,7 +91,9 @@ public class PtrGifHeaderView extends FrameLayout implements PtrUIHandler {
     @Override
     public void onUIRefreshBegin(PtrFrameLayout frame) {
         Log.d("DdHeaderView", "onUIRefreshBegin");
-        mHeaderImage.setImageDrawable(mGifRefresingDrawble);
+        if (mHeaderImage != null) {
+            mHeaderImage.setImageDrawable(mGifRefresingDrawble);
+        }
         if (!mGifRefresingDrawble.isPlaying()) {
             mGifRefresingDrawble.start();
         }
@@ -119,7 +126,10 @@ public class PtrGifHeaderView extends FrameLayout implements PtrUIHandler {
 
     private void crossRotateLineFromTopUnderTouch(PtrFrameLayout frame) {
         Log.d("DdHeaderView", "crossRotateLineFromTopUnderTouch");
-        mHeaderImage.setImageDrawable(mGifPullDrawable);
+        if (mHeaderImage != null) {
+            mHeaderImage.setImageDrawable(mGifPullDrawable);
+        }
+
         if (!mGifPullDrawable.isPlaying()) {
             mGifPullDrawable.start();
         }
@@ -127,7 +137,10 @@ public class PtrGifHeaderView extends FrameLayout implements PtrUIHandler {
 
     private void crossRotateLineFromBottomUnderTouch(PtrFrameLayout frame) {
         Log.d("DdHeaderView", "crossRotateLineFromBottomUnderTouch");
-        mHeaderImage.setImageDrawable(mIdelDrawble);
+        if (mHeaderImage != null) {
+            mHeaderImage.setImageDrawable(mIdelDrawble);
+        }
+
         if (!mIdelDrawble.isPlaying()) {
             mIdelDrawble.start();
         }

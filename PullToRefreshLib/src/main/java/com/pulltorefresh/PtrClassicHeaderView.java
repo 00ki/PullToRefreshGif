@@ -16,7 +16,6 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.pulltorefresh.indicator.PtrIndicator;
-import com.chanven.commonpulltorefreshview.R;
 
 public class PtrClassicHeaderView extends FrameLayout implements PtrUIHandler {
 

@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import com.pulltorefresh.indicator.PtrIndicator;
 import com.pulltorefresh.utils.PtrCLog;
-import com.chanven.commonpulltorefreshview.R;
 
 /**
  * This layout view for "Pull to Refresh(Ptr)" support all of the view, you can contain everything you want.
@@ -194,7 +193,7 @@ public class PtrFrameLayout extends ViewGroup {
         if (mContent != null) {
             measureContentView(mContent, widthMeasureSpec, heightMeasureSpec);
             if (DEBUG && DEBUG_LAYOUT) {
-                ViewGroup.MarginLayoutParams lp = (MarginLayoutParams) mContent.getLayoutParams();
+                MarginLayoutParams lp = (MarginLayoutParams) mContent.getLayoutParams();
                 PtrCLog.d(LOG_TAG, "onMeasure content, width: %s, height: %s, margin: %s %s %s %s",
                         getMeasuredWidth(), getMeasuredHeight(),
                         lp.leftMargin, lp.topMargin, lp.rightMargin, lp.bottomMargin);

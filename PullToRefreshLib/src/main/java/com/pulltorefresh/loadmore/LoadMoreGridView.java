@@ -11,8 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import com.chanven.commonpulltorefreshview.R;
+import com.pulltorefresh.R;
 
 public class LoadMoreGridView extends GridViewWithHeaderAndFooter implements OnScrollListener {
 

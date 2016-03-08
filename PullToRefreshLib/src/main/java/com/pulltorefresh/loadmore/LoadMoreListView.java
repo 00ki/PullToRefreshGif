@@ -13,7 +13,8 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.chanven.commonpulltorefreshview.R;
+import com.pulltorefresh.R;
+
 
 public class LoadMoreListView extends ListView implements OnScrollListener {
 
